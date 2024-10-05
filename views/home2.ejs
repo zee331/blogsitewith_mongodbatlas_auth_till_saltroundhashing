@@ -1,0 +1,25 @@
+<%- include("partials/header") -%>
+
+<h1 style="color: #1abc9c !important;">All Posts</h1>
+
+
+<% posts1.forEach (function (post) {  %>
+    <h1> <a href="/posts/<%= post.title %>"><%= post.title %></a></h1>
+   <% if (post.content.length > 200){%>
+        <p><%= post.content.substring(0,200) + " ...."%> <a href="/posts/<%= post.title %>">Read more</a>  </p> 
+    <%} else {%>
+        <p><%= post.content%></p> 
+    <%}%>
+
+<% }) %>
+
+
+
+</div>
+<div class="footer-padding"></div>
+  <div class="footer1">
+    <p>Made with ❤️ by Zeeshan</p>
+  </div>
+</div>
+</body>
+</html>
